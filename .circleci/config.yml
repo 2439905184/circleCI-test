@@ -31,3 +31,4 @@ jobs:
       # run tests!
       - run: javac Test.java
       - run: ls
+      - run: java Test
