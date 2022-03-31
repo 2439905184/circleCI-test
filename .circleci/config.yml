@@ -17,7 +17,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: ~/project#~/repo
+    working_directory: ~/repo#~/repo
     #working_directory: /tmp
 
     environment:
@@ -33,7 +33,7 @@ jobs:
           name: complie
           command: |
             javac Test.java
-            ls
-            tree
+            ls 
+            pwd
       - store_artifacts:
-          path: ~/repo/Test.java
+          path: ~/Test.java
