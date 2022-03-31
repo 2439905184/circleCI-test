@@ -17,8 +17,8 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    #working_directory: ~/repo
-    working_directory: /tmp
+    working_directory: ~/project#~/repo
+    #working_directory: /tmp
 
     environment:
       # Customize the JVM maximum heap limit
@@ -29,8 +29,11 @@ jobs:
     steps:
       - checkout
 
-      # run tests!
-      - run: javac Test.java
-      - run: ls
+      - run:
+          name: complie
+          command: |
+            javac Test.java
+            ls
+            tree
       - store_artifacts:
-          path: /tmp/Test.class
+          path: ~/repo/Test.java
