@@ -38,4 +38,4 @@ jobs:
             ls 
             pwd
       - store_artifacts:
-          path: ~/Test.java
+          path: /home/circleci/repo#~/repo/Test.java
