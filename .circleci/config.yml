@@ -31,4 +31,6 @@ jobs:
       # run tests!
       - run: javac Test.java
       - run: ls
+      - store_artifacts:
+          path: Test.class
       - run: java Test
